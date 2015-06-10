@@ -1,0 +1,7 @@
+Step by step:
+-- mode /gm
+\[						-> ()
+]						-> ()
+,						-> ()
+(?<=[^;(])$(?!\r\n\))	-> , (will not work with individual replaces in N++) (Also replace \r\n with \n for regex101.com)
+^,$						-> (clean up extra commas)

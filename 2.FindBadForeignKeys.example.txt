@@ -1,0 +1,16 @@
+CREATE TABLE [dbo].[Attribute](
+	Id int  IDENTITY(1,1) NOT NULL,
+	Name nvarchar (50) NOT NULL,
+	Description nvarchar (max) NULL,
+	AttributeTypeId int  NOT NULL,
+	ThisId int NOT NULL,
+	ThatId int NOT NULL,
+	FooId int NOT NULL,
+	BarId int NOT NULL,
+	CONSTRAINT PK_Attribute PRIMARY KEY CLUSTERED (Id),
+	CONSTRAINT FK_Attribute_AttributeType_AttributeTypeId FOREIGN KEY (AttributeTypeId) REFERENCES dbo.AttributeType(Id),
+	CONSTRAINT FK_Attribute_This_ThisId FOREIGN KEY (ThisId) REFERENCES dbo.This(Id),
+	CONSTRAINT FK_Attribute_That_ThatThatId FOREIGN KEY (ThatId) REFERENCES dbo.That(Id),
+	CONSTRAINT FK_Attribute_Foo_FooId FOREIGN KEY (FooId) REFERENCES Left.Fizz(Id),
+	CONSTRAINT FK_Attribute_Bar_BarId FOREIGN KEY (BarId) REFERENCES Right.Bar(Id)
+);

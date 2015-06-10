@@ -1,0 +1,6 @@
+All in one:
+-- mode /gm
+,?(?:\[(\w+)] \[(\w+)]( IDENTITY)?(\([^)]+\))? ((?:NOT )?NULL)|(?:(CONSTRAINT )\[(\w+)])( (?:FOREIGN|PRIMARY) KEY (?:CLUSTERED \(\w+\)|\(\w+\) REFERENCES ))(?:\[(\w+)](\.)\[(\w+)](\(\w+\)))?)
+	-> \1 \2 \3\4 \5\6\7\8\9$10$11$12,
+
+^\s+CONSTRAINT		-> \tCONSTRAINT

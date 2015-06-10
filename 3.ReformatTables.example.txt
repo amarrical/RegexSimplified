@@ -1,0 +1,38 @@
+CREATE TABLE [dbo].[AttributeType](
+	[Id] [int] IDENTITY(1,1) NOT NULL
+	,[Name] [nvarchar](50) NOT NULL
+	,CONSTRAINT [PK_AttributeType] PRIMARY KEY CLUSTERED (Id)
+);
+
+CREATE TABLE [dbo].[Attribute](
+	[Id] [int] IDENTITY(1,1) NOT NULL
+	,[Name] [nvarchar](50) NOT NULL
+	,[Description] [nvarchar](max) NULL
+	,[AttributeTypeId] [int] NOT NULL
+	,CONSTRAINT [PK_Attribute] PRIMARY KEY CLUSTERED (Id)
+	,CONSTRAINT [FK_Attribute_AttributeType_AttributeTypeId] FOREIGN KEY (AttributeTypeId) REFERENCES [dbo].[AttributeType](Id)
+);
+
+CREATE TABLE [dbo].[Person](
+	[Id] [int] IDENTITY(1,1) NOT NULL
+	,[GivenName] [nvarchar](50) NOT NULL
+	,[FamilyName] [nvarchar](50) NOT NULL
+	,CONSTRAINT [PK_Person] PRIMARY KEY CLUSTERED (Id)
+);
+
+CREATE TABLE [dbo].[PersonAttribute](
+	[Id] [int] IDENTITY(1,1) NOT NULL
+	,[PersonId] [int] NOT NULL
+	,[AttributeId] [int] NOT NULL
+	,CONSTRAINT [PK_PersonAttribute] PRIMARY KEY CLUSTERED (Id)
+	,CONSTRAINT [FK_PersonAttribute_Person_PersonId] FOREIGN KEY (PersonId) REFERENCES [dbo].[Person](Id)
+	,CONSTRAINT [FK_PersonAttribute_Attribute_AttributeId] FOREIGN KEY (AttributeId) REFERENCES [dbo].[Attribute](Id)
+);
+
+
+
+
+
+
+
+,?(?:\[(\w+)] \[(\w+)]( IDENTITY)?(\([^)]+\))? ((?:NOT )?NULL)|(?:(CONSTRAINT )\[(\w+)])( (?:FOREIGN|PRIMARY) KEY (?:CLUSTERED \(\w+\)|\(\w+\) REFERENCES ))(?:\[(\w+)](\.)\[(\w+)](\(\w+\)))?)
