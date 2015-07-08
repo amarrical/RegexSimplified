@@ -1,3 +1,9 @@
+Have you ever thought regex was hard?  Have you ever wished there was an easier way to do it?
+
+Come with me as I teach you how to both be better at regex and also do powerful things by keeping your queries simple.
+How do we do that?  The same way we eat an elephant: one bite at a time.
+
+
 # RegexSimplified
 Doing complicated regex work with multiple simple regex matches
 
@@ -8,3 +14,11 @@ Regexes are shown as:
 Regex	->	replacement
 Note that any replacement surrounded by () is blank, and if there is text in the replacement it is explanatory.  ([\w\s]*) is an invalid replacement anyway.
 In some cases, the grave accent will be used to surround regexes or replacements which start or end with spaces
+
+
+
+Useful sites:
+http://regexpal.com/ - testing regexes
+https://regex101.com/ - testing regexes
+http://www.regular-expressions.info/ - learning
+http://jsonlint.com/ - validating json (for one example)
