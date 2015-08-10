@@ -28,11 +28,3 @@ CREATE TABLE [dbo].[PersonAttribute](
 	,CONSTRAINT [FK_PersonAttribute_Person_PersonId] FOREIGN KEY (PersonId) REFERENCES [dbo].[Person](Id)
 	,CONSTRAINT [FK_PersonAttribute_Attribute_AttributeId] FOREIGN KEY (AttributeId) REFERENCES [dbo].[Attribute](Id)
 );
-
-
-
-
-
-
-
-,?(?:\[(\w+)] \[(\w+)]( IDENTITY)?(\([^)]+\))? ((?:NOT )?NULL)|(?:(CONSTRAINT )\[(\w+)])( (?:FOREIGN|PRIMARY) KEY (?:CLUSTERED \(\w+\)|\(\w+\) REFERENCES ))(?:\[(\w+)](\.)\[(\w+)](\(\w+\)))?)

@@ -1,0 +1,4 @@
+Simple Non-Match:
+FOREIGN KEY													-> (count matches)
+_([^_]+) FOREIGN KEY \(\1									-> (count matches)
+_([^_]+)_([^_]+) FOREIGN KEY \(\w+\) REFERENCES \w+\.\1		-> (count matches)

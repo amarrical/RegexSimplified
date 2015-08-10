@@ -1,0 +1,11 @@
+Step by step example:
+-- mode /gm:
+<(\w+)>([^<]+)<\/\1>		-> "\1" : "\2"
+(?<=[^">])$\r\n				-> (removes end of lines inside quotes)
+"$\r\n						-> `", `
+<catalog>					-> { "catalog" : [ (could just as easily type this replacement)
+</catalog>					-> ] } (same with this replacement)
+<book id="([\w\d]+)">		-> { "book" : { "id" : "\1",
+,\s+</book>					-> } },
+\s{2,}						-> ()
+\}, ]						-> }  ]

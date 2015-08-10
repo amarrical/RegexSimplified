@@ -1,8 +1,0 @@
-Complicated Non-Match:
-CONSTRAINT FK_(?:[^_]+)_([^_]+)_([^ ]+) FOREIGN KEY \((?!\2)						-> (matches bad name based on column name)
-CONSTRAINT FK_(?:[^_]+)_([^_]+)_([^ ]+) FOREIGN KEY \(\w+\) REFERENCES \w+\.(?!\1)	-> (matches bad name based on table name)
-
-Simple Non-Match:
-FOREIGN KEY													-> (count matches)
-_([^_]+) FOREIGN KEY \(\1									-> (count matches)
-_([^_]+)_([^_]+) FOREIGN KEY \(\w+\) REFERENCES \w+\.\1		-> (count matches)

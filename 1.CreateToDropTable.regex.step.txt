@@ -1,7 +1,3 @@
-All in one:
--- mode /gs (. matches newline)
-(?:\s+)?CREATE TABLE (\w+(?:\.\w+)?)\([^;]*;(?:\s+)?	-> 	 DROP TABLE \1;\r\n
-
 Step by step:
 -- mode /gs (. matches newline)
 CREATE TABLE 	->	DROP TABLE

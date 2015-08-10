@@ -9,7 +9,3 @@ Step by step example:
 ,\s+</book>					-> } },
 \s{2,}						-> ()
 \}, ]						-> }  ]
-
-All in one example:
-
-... Yer kidding me, right?
