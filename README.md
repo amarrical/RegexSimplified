@@ -18,8 +18,8 @@ In some cases, the grave accent will be used to surround regexes or replacements
 
 
 Useful sites:
+http://www.regular-expressions.info/ - learning
 http://regexpal.com/ - testing regexes
 https://regex101.com/ - testing regexes
-http://www.regular-expressions.info/ - learning
 http://regexper.com/ - visualizing regex
 http://jsonlint.com/ - validating json (for one example)
