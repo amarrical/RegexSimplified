@@ -8,7 +8,7 @@ How do we do that?  The same way we eat an elephant: one bite at a time.
 Doing complicated regex work with multiple simple regex matches
 
 Example files end in name.example.txt
-Matching regex patterns (complicated and simple) are contained in name.regex.txt
+Matching regex patterns (single vs step) are contained in name.regex.(single|step).txt
 
 Regexes are shown as:
 Regex	->	replacement
